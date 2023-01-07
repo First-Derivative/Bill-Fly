@@ -13,14 +13,14 @@ export interface EffectObject {
 
 function App() {
 
-  const [count, setCount] = useState<number>(0)
+  const [count, setCount] = useState<number>(13)
   const [income, setIncome] = useState<number>(2035)
   const [effects, setEffects] = useState<Array<EffectObject>>(localEffects)
   const [isInvalid, setIsInvalid] = useState<boolean>(false)
 
   const updateIncome = (e: any) => setIncome(parseInt(e.target.value))
-  const removeEffect = (target: number) => setEffects(effects.filter(eff => eff.id === target))
-  const updateEffect = (effect: EffectObject) => { setEffects([...effects, effect]); setCount(prev => prev++) }
+  const removeEffect = (target: number) => setEffects(effects.filter(eff => eff.id !== target))
+  const updateEffect = (effect: EffectObject) => { setEffects([...effects, effect]); setCount(prev => prev += 1) }
 
   const calcIncome = (): string => {
     let net = income
