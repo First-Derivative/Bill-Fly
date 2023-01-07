@@ -53,5 +53,15 @@
     "id": 0,
     "text": "social outings",
     "value": -65
+  },
+  {
+    "id": 0,
+    "text": "bills",
+    "value": -100
+  },
+  {
+    "id": 0,
+    "text": "utils",
+    "value": -50
   }
 ]
