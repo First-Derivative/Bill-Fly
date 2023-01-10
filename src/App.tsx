@@ -13,7 +13,7 @@ export interface EffectObject {
 
 function App() {
 
-  const [count, setCount] = useState<number>(13)
+  const [count, setCount] = useState<number>(14)
   const [income, setIncome] = useState<number>(2035)
   const [effects, setEffects] = useState<Array<EffectObject>>(localEffects)
   const [isInvalid, setIsInvalid] = useState<boolean>(false)
